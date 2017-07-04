@@ -23,7 +23,7 @@ public class Frame extends JFrame implements MouseListener, KeyListener
     public Frame()
     {
         super("MineSweeper");
-         
+     
         world = new World();
          
         setResizable(false);

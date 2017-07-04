@@ -27,6 +27,7 @@ public class Tile
         this.bombImage = bomb;
         this.openedImage = openedImage;
         this.flagImage = flag;
+        
     }
      
     public void setOpenedImage(BufferedImage openedImage)
@@ -57,6 +58,7 @@ public class Tile
     public void setAmountOfNearBombs(int amountOfNearBombs)
     {
         this.amountOfNearBombs = amountOfNearBombs;
+        System.out.println("Amount of Bombs: " + amountOfNearBombs);
     }
      
     public int getAmountOfNearBombs()
@@ -106,10 +108,12 @@ public class Tile
                 if(amountOfNearBombs > 0)
                 {
                     g.setColor(Color.WHITE);
-                    g.drawString("" + amountOfNearBombs, x * width + 7, y * height + height - 4);
+                    g.drawString("" + amountOfNearBombs, x * width, y * height);
+                    //TODO Ordne Zahlen richtig an
                 }
             }
         }
+        //TODO Ersetze Zahlenstrings durch Zahlenbilder
     }
      
     public static int getWidth()
