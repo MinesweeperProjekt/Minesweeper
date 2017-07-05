@@ -10,8 +10,8 @@ import javax.swing.JPanel;
  
 public class Frame extends JFrame implements MouseListener, KeyListener
 {
-    private static int width = 400;
-    private static int height = 400;
+    private static int width = 800;
+    private static int height = 800;
      
     private Screen screen;
     private World world;
