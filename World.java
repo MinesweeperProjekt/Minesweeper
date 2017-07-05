@@ -17,10 +17,10 @@ public class World
 
     private Tile[][] tiles;
 
-    private BufferedImage bomb = ImageLoader.scale(ImageLoader.loadImage("gfx/bomb.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage flag = ImageLoader.scale(ImageLoader.loadImage("gfx/flag.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage pressed = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage normal = ImageLoader.scale(ImageLoader.loadImage("gfx/normal.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage bomb = ImageLoader.scale(ImageLoader.loadImage("bomb.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage flag = ImageLoader.scale(ImageLoader.loadImage("flag.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage pressed = ImageLoader.scale(ImageLoader.loadImage("pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage normal = ImageLoader.scale(ImageLoader.loadImage("normal.png"), Tile.getWidth(), Tile.getHeight());
     //TODO Füge Zahlenbilder hinzu
 
     public World()
