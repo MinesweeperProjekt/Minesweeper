@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class World
 {
-    private static int width = 40;
-    private static int height = 40;
+    private static int width = 20;
+    private static int height = 20;
 
     private final int AMOUNT_OF_BOMBS = 40;
 
@@ -22,7 +22,15 @@ public class World
     private BufferedImage pressed = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage normal = ImageLoader.scale(ImageLoader.loadImage("gfx/normal.png"), Tile.getWidth(), Tile.getHeight());
     //TODO Füge Zahlenbilder hinzu
-    
+    private BufferedImage one = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage two = ImageLoader.scale(ImageLoader.loadImage("gfx/ZweiImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage three = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage four = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage five = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage six = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage seven = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage eight = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+
     public World()
     {
         random = new Random();
@@ -33,10 +41,10 @@ public class World
         {
             for(int y = 0;y < height;y++)
             {
-                tiles[x] [y] = new Tile(x, y, normal, bomb, pressed, flag);
+                tiles[x] [y] = new Tile(x, y, normal, bomb, pressed, flag, one, two, three, four, five, six, seven, eight);
             }
         }
-        
+
         placeBombs();
         setNumbers();
     }
@@ -80,7 +88,7 @@ public class World
                 if(gx < width&&my >= 0&&tiles[gx] [my].isBomb()) amountOfBombs++;
                 if(gx < width&&tiles[gx] [y].isBomb()) amountOfBombs++;
                 if(gx < width&&gy < height&&tiles[gx] [gy].isBomb()) amountOfBombs++;
-                
+
                 tiles[x] [y].setAmountOfNearBombs(amountOfBombs);
             }
         }
@@ -205,7 +213,7 @@ public class World
             g.drawString("You won!", 10, 30);
         }
     }
-    
+
     public void getInfoBombs(){
         for(int x = 0;x < width;x++)
         {

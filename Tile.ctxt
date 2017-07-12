@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=x\ y\ normal\ bomb\ openedImage\ flag
-comment0.target=Tile(int,\ int,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage)
+comment0.params=x\ y\ normal\ bomb\ openedImage\ flag\ oneImage\ twoImage\ threeImage\ fourImage\ fiveImage\ sixImage\ sevenImage\ eightImage
+comment0.target=Tile(int,\ int,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage,\ java.awt.image.BufferedImage)
 comment1.params=openedImage
 comment1.target=void\ setOpenedImage(java.awt.image.BufferedImage)
 comment10.params=
