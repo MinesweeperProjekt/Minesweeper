@@ -24,8 +24,8 @@ public class Tile
     private boolean flag;
     private int amountOfNearBombs;
 
-    private static int width = Frame.getScreenWidth()/World.getWidth(); 
-    private static int height = Frame.getScreenHeight()/World.getHeight(); 
+    private static int width = Frame.getPlayWidth()/World.getWidth(); 
+    private static int height = Frame.getPlayHeight()/World.getHeight(); 
 
     public Tile(int x, int y, BufferedImage normal, BufferedImage bomb, BufferedImage openedImage, BufferedImage flag, BufferedImage oneImage, BufferedImage twoImage, BufferedImage threeImage, BufferedImage fourImage, BufferedImage fiveImage, BufferedImage sixImage, BufferedImage sevenImage, BufferedImage eightImage)
     {
@@ -43,6 +43,8 @@ public class Tile
         this.sixImage = sixImage;
         this.sevenImage = sevenImage;
         this.eightImage = eightImage;
+        
+        this.opened = true;
     }
 
     public void setOpenedImage(BufferedImage openedImage)
@@ -73,7 +75,6 @@ public class Tile
     public void setAmountOfNearBombs(int amountOfNearBombs)
     {
         this.amountOfNearBombs = amountOfNearBombs;
-        System.out.println("Amount of Bombs: " + amountOfNearBombs);
     }
 
     public int getAmountOfNearBombs()
@@ -111,15 +112,15 @@ public class Tile
     {
         if(!opened) 
         {
-            if(!flag) g.drawImage(normal, x * width, y * height, null);
-            else g.drawImage(flagImage, x * width, y * height, null);
+            if(!flag) upDrawImage(g, normal, x * width, y * height);
+            else upDrawImage(g, flagImage, x * width, y * height);
         }
         else
         {
-            if(bomb) g.drawImage(bombImage, x * width, y * height, null);
+            if(bomb) upDrawImage(g, bombImage, x * width, y * height);
             else
             {
-                g.drawImage(openedImage, x * width, y * height, null);
+                upDrawImage(g, openedImage, x * width, y * height);
                 if(amountOfNearBombs > 0)
                 {
                     //g.setColor(Color.WHITE);
@@ -127,28 +128,28 @@ public class Tile
                     //TODO Ordne Zahlen richtig an
                     switch (amountOfNearBombs) {
                         case 1:
-                        g.drawImage(oneImage, x * width, y * height, null);
+                        upDrawImage(g, oneImage, x * width, y * height);
                         break;
                         case 2:
-                        g.drawImage(twoImage, x * width, y * height, null);
+                        upDrawImage(g, twoImage, x * width, y * height);
                         break;
                         case 3:
-                        g.drawImage(threeImage, x * width, y * height, null);
+                        upDrawImage(g, threeImage, x * width, y * height);
                         break;
                         case 4:
-                        g.drawImage(fourImage, x * width, y * height, null);
+                        upDrawImage(g, fourImage, x * width, y * height);
                         break;
                         case 5:
-                        g.drawImage(fiveImage, x * width, y * height, null);
+                        upDrawImage(g, fiveImage, x * width, y * height);
                         break;
                         case 6:
-                        g.drawImage(sixImage, x * width, y * height, null);
+                        upDrawImage(g, sixImage, x * width, y * height);
                         break;
                         case 7:
-                        g.drawImage(sevenImage, x * width, y * height, null);
+                        upDrawImage(g, sevenImage, x * width, y * height);
                         break;
                         case 8:
-                        g.drawImage(eightImage, x * width, y * height, null);
+                        upDrawImage(g, eightImage, x * width, y * height);
                         break;
                     }
                 }
@@ -156,6 +157,9 @@ public class Tile
         }
 
         //TODO Ersetze Zahlenstrings durch Zahlenbilder
+    }
+    public void upDrawImage(Graphics g,BufferedImage imageName, int widthPos, int heightPos){
+        g.drawImage(imageName, widthPos + Frame.getExtentsWidth() / 2,heightPos + Frame.getExtentsHeight(),null);
     }
 
     public static int getWidth()

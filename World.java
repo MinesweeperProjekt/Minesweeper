@@ -17,7 +17,7 @@ public class World
 
     private Tile[][] tiles;
 
-    private BufferedImage bomb = ImageLoader.scale(ImageLoader.loadImage("gfx/bomb.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage bomb = ImageLoader.scale(ImageLoader.loadImage("gfx/bombnp.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage flag = ImageLoader.scale(ImageLoader.loadImage("gfx/flag.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage pressed = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage normal = ImageLoader.scale(ImageLoader.loadImage("gfx/normal.png"), Tile.getWidth(), Tile.getHeight());
@@ -27,16 +27,16 @@ public class World
     private BufferedImage three = ImageLoader.scale(ImageLoader.loadImage("gfx/DreiImage.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage four = ImageLoader.scale(ImageLoader.loadImage("gfx/VierImage.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage five = ImageLoader.scale(ImageLoader.loadImage("gfx/FünfImage.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage six = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage seven = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage eight = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage six = ImageLoader.scale(ImageLoader.loadImage("gfx/SechsImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage seven = ImageLoader.scale(ImageLoader.loadImage("gfx/SiebenImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage eight = ImageLoader.scale(ImageLoader.loadImage("gfx/AchtImage.png"), Tile.getWidth(), Tile.getHeight());
 
     public World()
     {
         random = new Random();
 
         tiles = new Tile[width] [height];
-
+        System.out.println(Frame.getExtentsHeight());
         for(int x = 0;x < width;x++)
         {
             for(int y = 0;y < height;y++)
@@ -105,7 +105,18 @@ public class World
             {
                 tiles[tileX] [tileY].setOpened(true);
 
-                if(tiles[tileX] [tileY].isBomb()) dead = true;
+                if(tiles[tileX] [tileY].isBomb()){ 
+                    dead = true;
+                    for(int xx = 0;xx < width;xx++)
+                    {
+                        for(int yy = 0;yy < height;yy++)
+                        {
+                            if (tiles[xx] [yy].isBomb()){
+                                tiles[xx][yy] .setOpened(true);
+                            }
+                        }
+                    }
+                }
                 else
                 {
                     if(tiles[tileX] [tileY].getAmountOfNearBombs() == 0) 
