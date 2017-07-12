@@ -22,11 +22,11 @@ public class World
     private BufferedImage pressed = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage normal = ImageLoader.scale(ImageLoader.loadImage("gfx/normal.png"), Tile.getWidth(), Tile.getHeight());
     //TODO Füge Zahlenbilder hinzu
-    private BufferedImage one = ImageLoader.scale(ImageLoader.loadImage("gfx/EinsImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage one = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage two = ImageLoader.scale(ImageLoader.loadImage("gfx/ZweiImage.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage three = ImageLoader.scale(ImageLoader.loadImage("gfx/DreiImage.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage four = ImageLoader.scale(ImageLoader.loadImage("gfx/VierImage.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage five = ImageLoader.scale(ImageLoader.loadImage("gfx/FünfImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage three = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage four = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage five = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage six = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage seven = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage eight = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
