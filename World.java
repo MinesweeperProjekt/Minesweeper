@@ -22,6 +22,14 @@ public class World
     private BufferedImage pressed = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage normal = ImageLoader.scale(ImageLoader.loadImage("gfx/normal.png"), Tile.getWidth(), Tile.getHeight());
     //TODO Füge Zahlenbilder hinzu
+    private BufferedImage one = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage two = ImageLoader.scale(ImageLoader.loadImage("gfx/ZweiImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage three = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage four = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage five = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage six = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage seven = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage eight = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
 
     public World()
     {
@@ -33,7 +41,7 @@ public class World
         {
             for(int y = 0;y < height;y++)
             {
-                tiles[x] [y] = new Tile(x, y, normal, bomb, pressed, flag);
+                tiles[x] [y] = new Tile(x, y, normal, bomb, pressed, flag, one, two, three, four, five, six, seven, eight);
             }
         }
 
