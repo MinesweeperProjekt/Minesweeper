@@ -8,7 +8,7 @@ public class World
     private static int width = 20;
     private static int height = 20;
 
-    private final int AMOUNT_OF_BOMBS = 40;
+    private final int AMOUNT_OF_BOMBS = 80;
 
     private boolean finish;
     private boolean dead;
@@ -27,9 +27,9 @@ public class World
     private BufferedImage three = ImageLoader.scale(ImageLoader.loadImage("gfx/DreiImage.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage four = ImageLoader.scale(ImageLoader.loadImage("gfx/VierImage.png"), Tile.getWidth(), Tile.getHeight());
     private BufferedImage five = ImageLoader.scale(ImageLoader.loadImage("gfx/FünfImage.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage six = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage seven = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
-    private BufferedImage eight = ImageLoader.scale(ImageLoader.loadImage("gfx/pressed.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage six = ImageLoader.scale(ImageLoader.loadImage("gfx/SechsImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage seven = ImageLoader.scale(ImageLoader.loadImage("gfx/SiebenImage.png"), Tile.getWidth(), Tile.getHeight());
+    private BufferedImage eight = ImageLoader.scale(ImageLoader.loadImage("gfx/AchtImage.png"), Tile.getWidth(), Tile.getHeight());
 
     public World()
     {
