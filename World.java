@@ -8,7 +8,7 @@ public class World
     private static int width = 20;
     private static int height = 20;
 
-    private final int AMOUNT_OF_BOMBS = 80;
+    private final int AMOUNT_OF_BOMBS = 40;
 
     private boolean finish;
     private boolean dead;
@@ -36,7 +36,6 @@ public class World
         random = new Random();
 
         tiles = new Tile[width] [height];
-
         for(int x = 0;x < width;x++)
         {
             for(int y = 0;y < height;y++)
@@ -96,6 +95,8 @@ public class World
 
     public void clickedLeft(int x, int y)
     {
+        x -= Frame.getExtentsWidth() / 2;
+        y -= Frame.getExtentsHeight();
         if(!dead&&!finish)
         {
             int tileX = x/Tile.getWidth();
@@ -132,6 +133,8 @@ public class World
 
     public void clickedRight(int x, int y)
     {
+        x -= Frame.getExtentsWidth() / 2;
+        y -= Frame.getExtentsHeight();
         if(!dead&&!finish)
         {
             int tileX = x/Tile.getWidth();
